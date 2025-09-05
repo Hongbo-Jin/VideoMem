@@ -90,8 +90,8 @@ pip install -e .[decord]
 cd ..
 
 # download training dataset
-git lfs install
-git clone https://huggingface.co/datasets/Video-R1/Video-R1-data
+# git lfs install
+# git clone https://huggingface.co/datasets/Video-R1/Video-R1-data
 ```
 
 Please put the downloaded dataset to `src/r1-v/Video-R1-data/`
