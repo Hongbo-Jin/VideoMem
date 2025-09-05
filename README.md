@@ -94,7 +94,7 @@ cd ..
 # git clone https://huggingface.co/datasets/Video-R1/Video-R1-data
 ```
 
-Please put the downloaded dataset to `src/r1-v/Video-R1-data/`
+Please put the downloaded dataset to `r1-v/Video-R1-data/`
 
 Then, unzip the data
 
