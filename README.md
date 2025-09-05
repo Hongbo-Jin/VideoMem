@@ -85,7 +85,7 @@ bash setup.sh
 
 # qwen video extraction setting, e.g., max frames, resolutions
 # Use the [decord] feature to improve speed
-cd src/qwen-vl-utils
+cd qwen-vl-utils
 pip install -e .[decord]
 cd ..
 
