@@ -76,12 +76,11 @@ Interestingly, the response length curve first drops at the beginning of RL trai
 ## 📐 Set up
 
 ```bash
-git clone https://github.com/tulerfeng/Video-R1
-cd Video-R1
-
+git clone https://github.com/Hongbo-Jin/VideoMem.git
+cd VideoMem
 # build environment
-conda create -n video-r1 python=3.11 
-conda activate video-r1
+conda create -n videomem python=3.11 
+conda activate videomem
 bash setup.sh
 
 # qwen video extraction setting, e.g., max frames, resolutions
