@@ -5,22 +5,11 @@
 
 
 
-## 👀 About Video-R1
-
-Inspired by DeepSeek-R1's success in eliciting reasoning abilities through rule-based RL, we introduce Video-R1 as **the first work to *systematically* explore the R1 paradigm for eliciting video reasoning** within MLLMs. 
-
-We introduce T-GRPO, an extension of GRPO that incorporates temporal modeling to **explicitly promote temporal reasoning**. Besides, We constructed two datasets: **Video-R1-COT-165k** for SFT cold start and **Video-R1-260k** for RL training, both comprising image and video data.
-
-Our Video-R1-7B obtain strong performance on several video reasoning benchmarks. For example, Video-R1-7B attains a 35.8% accuracy on video spatial reasoning benchmark VSI-bench, **surpassing the commercial proprietary model GPT-4o**.
-
-Video-R1-7B **can be easily trained** using 4 H20 (96GB) GPUs, or 5 A100 (80G) GPUs.
-
-
+## 👀 About VIdeoMem
+coming soon......
 
 ## 🔥 News
-- [2025/05/28] Our Video-R1-7B achieves **36.5%** accuracy on the new video reasoning benchmark [**Video-Holmes**](https://video-holmes.github.io/Page.github.io/), beating the commercial model **o4-mini (29.9%)** and **Gemini-2.0-Flash (30.6%)**.
-- [2025/03/28] We release our paper, codes, model weights, and two curated training datasets in huggingface🤗 and modelscope🤖.
-- [2025/02/23] We release the preliminary version of Video-R1, you can refer to `./previous_version` for this version.
+- [2025/09/06] Our VideoMem-7B achieves **state-of-the-art** accuracy on the new long video benchmark [**M3-Bench**](https://m3-agent.github.io//), beating the commercial model **o4-mini** and **Gemini-2.0-Flash**.
 
 ## 📍 Features
 
@@ -88,21 +77,9 @@ bash setup.sh
 cd qwen-vl-utils
 pip install -e .[decord]
 cd ..
-
-# download training dataset
-# git lfs install
-# git clone https://huggingface.co/datasets/Video-R1/Video-R1-data
 ```
 
-Please put the downloaded dataset to `r1-v/Video-R1-data/`
-
-Then, unzip the data
-
-```
-python ./src/unzip.py
-```
-
-The `Video-R1-260k.json` file is for RL training while `Video-R1-COT-165k.json` is for SFT cold start.
+Please put the downloaded dataset to `r1-v/VideoMem-data/`
 
 Qwen2.5-VL has been frequently updated in the Transformers library, which may cause version-related bugs or inconsistencies. Our code is compatible with the following version, please download at [here](https://drive.google.com/file/d/1Kc81WZitEhUZYWXpL6y2GXuSXufLSYcF/view?usp=sharing)
 
