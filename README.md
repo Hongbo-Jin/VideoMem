@@ -5,7 +5,7 @@
 
 
 
-## 👀 About VIdeoMem
+## 👀 About VideoMem
 coming soon......
 
 ## 🔥 News
@@ -18,14 +18,6 @@ coming soon......
 + Support Image-Video mixed training
 + Support multiple types for answers output (multiple choice, numerical, OCR, free-form, regression)
 + Provide full pipeline (dataset, COT annotation, SFT training, RL training, evaluation, etc) 
-
-## 🔍 Dataset
-
- To overcome the scarcity of high-quality video reasoning training data, we strategically introduce image-based reasoning data as part of training data.  We collect data from a variety of public datasets and carefully sample and balance the proportion of each subset. 
-
-<img src="./images/dataset.png" style="zoom:80%;" />
-
-To facilitate an effective SFT cold start, we leverage Qwen2.5-VL-72B  to generate COT rationales for the samples in Video-R1-260k. After applying basic rule-based filtering to remove low-quality or inconsistent outputs, we obtain a high-quality CoT dataset, Video-R1-COT 165k.
 
 ## 🏆 Performance
 
@@ -43,15 +35,6 @@ This highlights the necessity of explicit reasoning capability in solving video 
 Besides, although the model is trained using only 16 frames, we find that evaluating on more frames (e.g., 64) generally leads to better performance, particularly on benchmarks with longer videos. These results indicate the importance of training models to reason over more frames.
 
 
-## 🧠 Aha Moment in Video Reasoning
-
-One of the most intriguing outcomes of reinforcement learning in Video-R1 is the emergence of self-reflection reasoning behaviors, commonly referred to as “aha moments”. Some examples are as follows.
-
-<img src="./images/demo1.png" style="zoom:80%;" />
-
-<img src="./images/demo2.png" style="zoom:80%;" />
-
-
 ## 📈 RL Training Curves
 
 The accuracy reward exhibits a generally upward trend, indicating that the model continuously improves its ability to produce correct answers under RL.
@@ -59,7 +42,6 @@ The accuracy reward exhibits a generally upward trend, indicating that the model
 Interestingly, the response length curve first drops at the beginning of RL training, then gradually increases. We guess this is because the model initially discards its previous, potentially sub-optimal reasoning style. Then gradually converges to a better and stable reasoning policy.
 
 <img src="./images/curves.png" style="zoom:80%;" />
-
 
 
 ## 📐 Set up
@@ -104,9 +86,9 @@ bash ./src/scripts/run_sft_video.sh
 ```
 If you want to skip the SFT process, we also provide one of our SFT models at [🤗Qwen2.5-VL-SFT](https://huggingface.co). 
 
-This is followed by RL training on the Video-R1-260k dataset to produce the final Video-R1 model. Due to current computational resource limitations, we train the model for only 1.2k RL steps.  
+This is followed by RL training to produce the final VideoMem model. Due to current computational resource limitations, we train the model for only 1.2k RL steps.  
 
-The script for training the obtained Qwen2.5-VL-7B-SFT model with T-GRPO or GRPO is as follows
+The script for training the obtained Qwen2.5-VL-7B-SFT model with Multi-Conv DAPO or GRPO is as follows
 
 ```bash
 bash ./src/scripts/run_grpo_video.sh
@@ -130,7 +112,7 @@ For all evaluations, we follow the decoding configuration used in the official Q
 
 We recommend using our provided json files and scripts for easier evaluation. 
 
-Next, download the evaluation video data from each benchmark’s official website, and place them in `/src/r1-v/Evaluation` as specified in the provided json files.
+Next, download the evaluation video data from each benchmark’s official website, and place them in `/r1-v/Evaluation` as specified in the provided json files.
 
 Finally, conduct evaluation on all benchmarks using the following scripts
 
