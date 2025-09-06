@@ -97,12 +97,12 @@ For trl library, please use 0.16.0 version.
 
 ## 🚀 Training
 
-We first perform supervised fine-tuning on the Video-R1-COT-165k dataset for one epoch to obtain the Qwen2.5-VL-7B-SFT model. If you want to perform CoT annotation on your own data, please refer to `src/generate_cot_vllm.py`
+We first perform supervised fine-tuning for one epoch to obtain the Qwen2.5-VL-7B-SFT model.
 
 ```bash
 bash ./src/scripts/run_sft_video.sh
 ```
-If you want to skip the SFT process, we also provide one of our SFT models at [🤗Qwen2.5-VL-SFT](https://huggingface.co/Video-R1/Qwen2.5-VL-7B-COT-SFT). 
+If you want to skip the SFT process, we also provide one of our SFT models at [🤗Qwen2.5-VL-SFT](https://huggingface.co). 
 
 This is followed by RL training on the Video-R1-260k dataset to produce the final Video-R1 model. Due to current computational resource limitations, we train the model for only 1.2k RL steps.  
 
@@ -129,8 +129,6 @@ During inference, we increase the max frame resolution to 256 × 28 × 28 and ma
 For all evaluations, we follow the decoding configuration used in the official Qwen2.5-VL demo, with top\_p = 0.001 and temperature = 0.01. Setting large top_p may encounter messy output when inference.
 
 We recommend using our provided json files and scripts for easier evaluation. 
-
-The json files can be downloaded at: [[🤗 Video-R1-eval](https://huggingface.co/datasets/Video-R1/Video-R1-eval)], put them in `/src/r1-v/Evaluation` 
 
 Next, download the evaluation video data from each benchmark’s official website, and place them in `/src/r1-v/Evaluation` as specified in the provided json files.
 
