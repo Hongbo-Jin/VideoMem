@@ -177,10 +177,10 @@ We sincerely appreciate the contributions of the open-source community. The rela
 If you find our work helpful for your research, please consider citing our work.   
 
 ```
-@article{feng2025video,
+@article{jin2025videomem,
   title={Video-R1: Reinforcing Video Reasoning in MLLMs},
-  author={Feng, Kaituo and Gong, Kaixiong and Li, Bohao and Guo, Zonghao and Wang, Yibing and Peng, Tianshuo and Wang, Benyou and Yue, Xiangyu},
-  journal={arXiv preprint arXiv:2503.21776},
+  author={Jin, Hongbo and Li, Ge},
+  journal={arXiv preprint},
   year={2025}
 }
 ```
