@@ -1,4 +1,4 @@
-# VideoMem: RL for Ultra-Long Video Memory
+# VideoMem: Multi-Conv RL for Ultra-Long Video Memory
 
 [[📖 Paper](https://arxiv.org/pdf/2503.21776)] [[🤗 Video-R1-7B-model](https://huggingface.co/Video-R1/Video-R1-7B)] [[🤗 Video-R1-train-data](https://huggingface.co/datasets/Video-R1/Video-R1-data)] 
 [[🤖 Video-R1-7B-model](https://modelscope.cn/models/Video-R1/Video-R1-7B)]  [[🤖 Video-R1-train-data](https://modelscope.cn/datasets/Video-R1/Video-R1-data)]
@@ -178,7 +178,7 @@ If you find our work helpful for your research, please consider citing our work.
 
 ```
 @article{jin2025videomem,
-  title={Video-R1: Reinforcing Video Reasoning in MLLMs},
+  title={Multi-Conv RL for Ultra-Long Video Memory},
   author={Jin, Hongbo and Li, Ge},
   journal={arXiv preprint},
   year={2025}
